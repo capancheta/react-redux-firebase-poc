@@ -4,12 +4,12 @@ import Notifications from './Notifications';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
-import { Navigate } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 class Dashboard extends Component {
   render() {
     const { projects, auth, notifications } = this.props;
-    if (!auth.uid) return <Navigate to='/signin' />;
+    if (!auth.uid) return <Redirect to='/signin' />;
 
     return (
       <div className='dashboard container'>

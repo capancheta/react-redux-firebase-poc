@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signUp } from '../../store/actions/authActions';
 
@@ -21,7 +21,7 @@ class SignUp extends Component {
   };
   render() {
     const { auth, authError } = this.props;
-    if (auth.uid) return <Navigate to='/' />;
+    if (auth.uid) return <Redirect to='/' />;
     return (
       <div className='container'>
         <form className='white' onSubmit={this.handleSubmit}>

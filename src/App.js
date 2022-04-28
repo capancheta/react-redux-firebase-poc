@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Dashboard from './components/dashboard/Dashboard';
 import ProjectDetails from './components/projects/ProjectDetails';
@@ -13,13 +13,13 @@ class App extends Component {
       <BrowserRouter>
         <div className='App'>
           <Navbar />
-          <Routes>
-            <Route exact path='/' element={<Dashboard />} />
-            <Route path='/project/:id' element={<ProjectDetails />} />
-            <Route path='/signin' element={<SignIn />} />
-            <Route path='/signup' element={<SignUp />} />
-            <Route path='/create' element={<CreateProject />} />
-          </Routes>
+          <Switch>
+            <Route exact path='/' component={Dashboard} />
+            <Route path='/project/:id' component={ProjectDetails} />
+            <Route path='/signin' component={SignIn} />
+            <Route path='/signup' component={SignUp} />
+            <Route path='/create' component={CreateProject} />
+          </Switch>
         </div>
       </BrowserRouter>
     );
