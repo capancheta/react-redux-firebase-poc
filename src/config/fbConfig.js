@@ -14,6 +14,5 @@ var config = {
 };
 firebase.initializeApp(config);
 firebase.firestore().settings({ timestampsInSnapshots: true, merge: true });
-firebase.auth();
 
 export default firebase;
