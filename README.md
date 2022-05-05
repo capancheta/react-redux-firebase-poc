@@ -1,4 +1,4 @@
-React-Redux-Firebase App (Updated)
+# React-Redux-Firebase App (Updated, April 2022)
 
 Updated version of https://github.com/iamshaunjp/React-Redux-Firebase-App made by NetNinja in the tutorials at https://www.youtube.com/playlist?list=PL4cUxeGkcC9iWstfXntcj8f-dFZ4UtlN3
 
@@ -9,7 +9,7 @@ All latest as of last modified date:
 
 - Redux
 - React-redux
-- redux-thunl
+- redux-thunk
 - React-redux-firebase
 - redux-firestore
 - Firebase (9.6, but used in compat mode, because i cant figure out how to tell redux-firestore to use the new getFirestore() call)
